@@ -5,11 +5,13 @@
 </head>
 <body>
 
-    <h1>TRANG CHỦ</h1>
+<h1>TRANG CHỦ</h1>
 
-    <a href="{{ url('/login') }}">
-        Đăng nhập
-    </a>
+<a href="/login">Đăng nhập</a>
+
+<br><br>
+
+<a href="/register">Đăng ký</a>
 
 </body>
 </html>

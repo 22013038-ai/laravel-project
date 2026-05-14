@@ -5,16 +5,21 @@
 </head>
 <body>
 
-    <h1>ĐĂNG NHẬP THÀNH CÔNG</h1>
+<h1>ĐĂNG NHẬP THÀNH CÔNG</h1>
 
-    <p>
-        Xin chào:
-        {{ session('username') }}
-    </p>
+<p>
+Xin chào:
+{{ session('name') }}
+</p>
 
-    <a href="{{ url('/logout') }}">
-        Logout
-    </a>
+<p>
+Username:
+{{ session('username') }}
+</p>
+
+<a href="/logout">
+Logout
+</a>
 
 </body>
 </html>
