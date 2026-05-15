@@ -9,39 +9,58 @@
 
 @if($errors->any())
 
-<div style="color:red">
+    <div style="color:red">
 
-@foreach($errors->all() as $error)
+        @foreach($errors->all() as $error)
 
-<p>{{ $error }}</p>
+            <p>{{ $error }}</p>
 
-@endforeach
+        @endforeach
 
-</div>
+    </div>
 
 @endif
 
-<form method="POST" action="/register">
+<form method="POST" action="{{ url('/register') }}">
 
-@csrf
+    @csrf
 
-<input type="text" name="name" placeholder="Họ tên">
+    <div>Họ tên</div>
+    <input type="text" name="name">
 
-<br><br>
+    <br><br>
 
-<input type="text" name="username" placeholder="Username">
+    <div>Username</div>
+    <input type="text" name="username">
 
-<br><br>
+    <br><br>
 
-<input type="password" name="password" placeholder="Password">
+    <div>Email</div>
+    <input type="email" name="email">
 
-<br><br>
+    <br><br>
 
-<button type="submit">
-Register
-</button>
+    <div>Password</div>
+    <input type="password" name="password">
+
+    <br><br>
+
+    <div>Confirm Password</div>
+    <input type="password" name="confirm_password">
+
+    <br><br>
+
+    <button type="submit">
+        Register
+    </button>
 
 </form>
+
+<br>
+
+<a href="/login">
+    Đăng nhập
+</a>
 
 </body>
 </html>

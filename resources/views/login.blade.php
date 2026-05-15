@@ -8,39 +8,47 @@
 <h1>ĐĂNG NHẬP</h1>
 
 @if(session('success'))
+
 <p style="color:green">
-{{ session('success') }}
+    {{ session('success') }}
 </p>
+
 @endif
 
 @if(session('error'))
+
 <p style="color:red">
-{{ session('error') }}
+    {{ session('error') }}
 </p>
+
 @endif
 
-<form method="POST" action="/login">
+<form method="POST" action="{{ url('/login') }}">
 
-@csrf
+    @csrf
 
-<input type="text" name="username" placeholder="Username">
+    <div>Username</div>
 
-<br><br>
+    <input type="text" name="username">
 
-<input type="password" name="password" placeholder="Password">
+    <br><br>
 
-<br><br>
+    <div>Password</div>
 
-<button type="submit">
-Login
-</button>
+    <input type="password" name="password">
+
+    <br><br>
+
+    <button type="submit">
+        Login
+    </button>
 
 </form>
 
 <br>
 
 <a href="/register">
-Đăng ký tài khoản
+    Đăng ký
 </a>
 
 </body>
